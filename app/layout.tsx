@@ -12,14 +12,14 @@ import { KasadaClient } from '@/lib/kasada/kasada-client'
 export const metadata = {
   metadataBase: new URL('https://gemini.vercel.ai'),
   title: {
-    default: 'Next.js Gemini Chatbot',
-    template: `%s - Next.js Gemini Chatbot`
+    default: 'Mandarin Translate Chatbot',
+    template: `%s Mandarin Translate Chatbot`
   },
   description:
     'Build your own generative UI chatbot using the Vercel AI SDK and Google Gemini',
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
+    icon: '/images/gemini.png',
+    shortcut: '/images/gemini.png',
     apple: '/apple-touch-icon.png'
   }
 }
