@@ -1,66 +1,44 @@
-<a href="https://chat.vercel.ai/">
-  <img alt="Next.js 14 and App Router-ready AI chatbot." src="https://gemini-chatbot.vercel.rocks/og.png">
-  <h1 align="center">Next.js AI Chatbot</h1>
-</a>
 
+[test.webm](https://github.com/user-attachments/assets/ceb82bb3-19f6-47db-a79a-3cd7520b052d)
+<h1 align="center">Next.js Gemini AI Mandarin-English Chatbot</h1>
 <p align="center">
-  An open-source AI chatbot app template built with Next.js, the Vercel AI SDK, Google Gemini, and Vercel KV.
+  An AI-powered chatbot app built with Next.js, Google Gemini, and Vercel AI SDK. This app is specifically designed for users struggling with learning Mandarin or translating Mandarin text into English.
 </p>
 
-<p align="center">
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#model-providers"><strong>Model Providers</strong></a> ·
-  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
-  <a href="#running-locally"><strong>Running locally</strong></a> ·
-  <a href="#authors"><strong>Authors</strong></a>
-</p>
-<br/>
 
-## Features
 
-- [Next.js](https://nextjs.org) App Router
-- React Server Components (RSCs), Suspense, and Server Actions
-- [Vercel AI SDK](https://sdk.vercel.ai/docs) for streaming chat UI
-- Support for Google Gemini (default), OpenAI, Anthropic, Cohere, Hugging Face, or custom AI chat models and/or LangChain
-- [shadcn/ui](https://ui.shadcn.com)
-  - Styling with [Tailwind CSS](https://tailwindcss.com)
-  - [Radix UI](https://radix-ui.com) for headless component primitives
-  - Icons from [Phosphor Icons](https://phosphoricons.com)
-- Chat History, rate limiting, and session storage with [Vercel KV](https://vercel.com/storage/kv)
-- [NextAuth.js](https://github.com/nextauthjs/next-auth) for authentication
+
+## Use Cases
+
+This chatbot is designed to help users who are learning Mandarin or translating Mandarin text into English. Key use cases include:
+
+- **Learning Mandarin:** Users can ask the chatbot to translate sentences or phrases from Mandarin to English, improving their understanding of the language.
+- **Job Application Translation:** For job seekers in Taiwan using the 104 job website, users can copy job descriptions in Mandarin and paste them into the chatbot to receive an English translation, making it easier to understand and apply for jobs.
 
 ## Model Providers
 
-This template ships with Google Gemini `models/gemini-1.0-pro-001` as the default. However, thanks to the [Vercel AI SDK](https://sdk.vercel.ai/docs), you can switch LLM providers to [OpenAI](https://openai.com), [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), [Hugging Face](https://huggingface.co), or using [LangChain](https://js.langchain.com) with just a few lines of code.
+This template uses Google Gemini's `models/gemini-1.0-pro-001` as the default model. However, the [Vercel AI SDK](https://sdk.vercel.ai/docs) allows you to switch between LLM providers such as [OpenAI](https://openai.com), [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), [Hugging Face](https://huggingface.co), or use custom AI models through [LangChain](https://js.langchain.com).
 
-## Deploy Your Own
 
-You can deploy your own version of the Next.js AI Chatbot to Vercel with one click:
+## Running Locally
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-title=Next.js+Chat&demo-description=A+full-featured%2C+hackable+Next.js+AI+chatbot+built+by+Vercel+Labs&demo-url=https%3A%2F%2Fchat.vercel.ai%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4aVPvWuTmBvzM5cEdRdqeW%2F4234f9baf160f68ffb385a43c3527645%2FCleanShot_2023-06-16_at_17.09.21.png&project-name=Next.js+Chat&repository-name=nextjs-chat&repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fgemini-chatbot&from=templates&skippable-integrations=1&env=GOOGLE_GENERATIVE_AI_API_KEY%2CAUTH_SECRET&envDescription=How+to+get+these+env+vars&envLink=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fgemini-chatbot%2Fblob%2Fmain%2F.env.example&teamCreateStatus=hidden&stores=[{%22type%22:%22kv%22}])
+You'll need to set up environment variables as defined in `.env.example`. We recommend using [Vercel Environment Variables](https://vercel.com/docs/projects/environment-variables), but you can also use a `.env` file.
 
-## Running locally
+> **Important:** Do not commit your `.env` file, as it contains sensitive data that could allow unauthorized access to your Google Cloud and authentication provider accounts.
 
-You will need to use the environment variables [defined in `.env.example`](.env.example) to run Next.js AI Chatbot. It's recommended you use [Vercel Environment Variables](https://vercel.com/docs/projects/environment-variables) for this, but a `.env` file is all that is necessary.
-
-> Note: You should not commit your `.env` file or it will expose secrets that will allow others to control access to your various Google Cloud and authentication provider accounts.
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. Link local instance with Vercel and GitHub accounts (creates `.vercel` directory): `vercel link`
-3. Download your environment variables: `vercel env pull`
+### Steps:
 
 ```bash
-pnpm install
-pnpm dev
+npm i
+npm run dev
 ```
 
-Your app template should now be running on [localhost:3000](http://localhost:3000/).
+Your app should now be running on [localhost:3000](http://localhost:3000/).
 
 ## Authors
 
-This library is created by [Vercel](https://vercel.com) and [Next.js](https://nextjs.org) team members, with contributions from:
+This project was developed by Jason Jonarto, with inspiration from the Vercel and Next.js team. 
 
-- Jared Palmer ([@jaredpalmer](https://twitter.com/jaredpalmer)) - [Vercel](https://vercel.com)
-- Shu Ding ([@shuding\_](https://twitter.com/shuding_)) - [Vercel](https://vercel.com)
-- shadcn ([@shadcn](https://twitter.com/shadcn)) - [Vercel](https://vercel.com)
-- Jeremy Philemon ([@jrmyphlmn](https://twitter.com/jrmyphlmn)) - [Vercel](https://vercel.com)
+This version focuses on your chatbot's purpose of helping with Mandarin-English translations, specifically for learners and job seekers using Mandarin websites like 104.
+
+This is a forked repo from [vercel-labs/gemini-chatbot](https://github.com/vercel-labs/gemini-chatbot)
